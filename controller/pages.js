@@ -4,6 +4,7 @@ const pageList = require('../models/pagelist')
 const slugify = require('slugify');
 
 
+
 exports.create = (req, res) => {
     const userdata = req.body.data
     const name = userdata.pagename
@@ -13,6 +14,8 @@ exports.create = (req, res) => {
     pages.name = name
     pages.slug = slug
     pages.pagedata = data
+    pages.mdesc= userdata.mdesc
+    
 
 
     const pagelistdata = new pageList();

@@ -43,19 +43,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(cookieParser());
-// cors
-// if (process.env.NODE_ENV === 'development') {
-//     app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
-// }
 
 app.use(cors());
-// routes middleware
-// app.use('/api', blogRoutes);
-// app.use('/api', authRoutes);
-// app.use('/api', userRoutes);
-// app.use('/api', categoryRoutes);
-// app.use('/api', tagRoutes);
-// app.use('/api', formRoutes);
 
 app.use('/api',pagesRoutes)
 app.use('/api',pagesListRoutes)

@@ -18,6 +18,9 @@ const Pages = new mongoose.Schema(
             type: Array,
             required: true,
         },
+        mdesc:{
+            type:String
+        }
     },
     { timestamp: true }
 );
